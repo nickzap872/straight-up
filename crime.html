@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Straight-Up</title>
-    <meta name="description" content="Your source for unbiased, objective information about current events in the US and around the world.">
-    <meta name="keywords" content="news, current events, unbiased news, objective reporting, politics, law, technology, diversity, change">
+    <title>Crime - Straight-Up</title>
+    <meta name="description" content="Explore crime news and stories, including detailed articles and updates on criminal cases. Stay informed with unbiased and objective reporting.">
+    <meta name="keywords" content="crime, criminal cases, crime news, criminal behavior, crime reports">
     <meta name="author" content="Straight-Up News">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -37,8 +37,8 @@
     </div>
     <div class="main-content">
         <div class="container">
-            <h1>Welcome to Straight-Up</h1>
-            <p>Your source for unbiased, objective information about current events in the US and around the world.</p>
+            <h1>Crime</h1>
+            <p>Explore crime news and stories, including detailed articles and updates on criminal cases. Stay informed with unbiased and objective reporting.</p>
             <div class="featured-articles">
                 <div class="featured-article">
                     <div>
@@ -92,5 +92,20 @@
             <a href="contact.html">Contact Us</a>
         </p>
     </div>
+    <script>
+        function share(platform) {
+            let url = window.location.href;
+            let text = "The Sinister Telepathic Manipulation by the LaMadrid Family: The Case of Nicolas Zapater-Lamadrid. Read more at: ";
+            let fullUrl;
+            if (platform === 'facebook') {
+                fullUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(text)}`;
+            } else if (platform === 'twitter') {
+                fullUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text + url)}`;
+            } else if (platform === 'linkedin') {
+                fullUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
+            }
+            window.open(fullUrl, '_blank');
+        }
+    </script>
 </body>
 </html>
